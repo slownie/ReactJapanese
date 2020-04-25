@@ -7,6 +7,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 {/*Basics Imports */}
 import Hiragana from './src/basics/Hiragana';
 import Katakana from './src/basics/Katakana';
+import Kanji from './src/basics/Kanji';
+import Radicals from './src/basics/Radicals';
 
 import styles from './src/Styles'
 
@@ -42,11 +44,13 @@ function BasicsScreen({navigation}) {
             <Button
                 title = 'Kanji - 漢字'
                 color = '#009688'
+                onPress = {() => navigation.navigate('Kanji')}
             />
 
             <Button
                 title = 'Radicals - 部首'
                 color = '#009688'
+                onPress = {() => navigation.navigate('Radicals')}
             />
         </SafeAreaView>
     );
@@ -115,6 +119,28 @@ function BasicsStack() {
             <Stack.Screen
                 name = 'Katakana'
                 component = {Katakana}
+                options = {{
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: { fontWeight: 'bold' },
+                    headerStyle: { backgroundColor: '#009688' },
+                }}
+            />
+
+            <Stack.Screen
+                name = 'Kanji'
+                component = {Kanji}
+                options = {{
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: { fontWeight: 'bold' },
+                    headerStyle: { backgroundColor: '#009688' },
+                }}
+            />
+
+            <Stack.Screen
+                name = 'Radicals'
+                component = {Radicals}
                 options = {{
                     headerTitleAlign: 'center',
                     headerTintColor: '#fff',
