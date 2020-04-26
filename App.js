@@ -10,6 +10,9 @@ import Katakana from './src/basics/Katakana';
 import Kanji from './src/basics/Kanji';
 import Radicals from './src/basics/Radicals';
 
+{/*Grammar Imports */}
+import SentenceStructure from './src/grammar/SentenceStructure'
+
 import styles from './src/Styles'
 
 const Stack = createStackNavigator();
@@ -61,15 +64,33 @@ function GrammarScreen({navigation}) {
         <SafeAreaView style = {{ flex: 1, flexDirection: 'column', alignItems: 'stretch', justifyContent: 'space-around'}}> 
             <StatusBar barStyle = 'light-content' backgroundColor = '#00675b' />
             <Button
-                title = 'Particles'
+                title = 'Sentence Structure'
                 color = '#009688'
+                onPress = {() => navigation.navigate('Sentence Structure')}
             />
 
             <Button
-                title = 'Sentence Structure'
+                title = 'Particles'
                 color = '#009688'
             />        
         </SafeAreaView>
+    );
+}
+
+function VocabularyScreen({navigation}) {
+    return (
+        <SafeAreaView style = {{ flex: 1, flexDirection: 'column', alignItems: 'stretch', justifyContent: 'space-around'}}> 
+        <StatusBar barStyle = 'light-content' backgroundColor = '#00675b' />
+        <Button
+            title = 'Greetings and Farewells'
+            color = '#009688'
+        />
+
+        <Button
+            title = 'Food'
+            color = '#009688'
+        />        
+    </SafeAreaView>
     );
 }
 
@@ -165,10 +186,37 @@ function GrammarStack() {
                     headerStyle: { backgroundColor: '#009688' },
                 }}
             />
+
+            <Stack.Screen
+                name = 'Sentence Structure'
+                component = {SentenceStructure}
+                options = {{
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: { fontWeight: 'bold' },
+                    headerStyle: { backgroundColor: '#009688' },
+                }}
+            />
         </Stack.Navigator>
     );
 }   
 
+function VocabularyStack() {
+    return (
+        <Stack.Navigator>
+             <Stack.Screen
+                name = 'Vocabulary'
+                component = {VocabularyScreen}
+                options = {{
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: { fontWeight: 'bold' },
+                    headerStyle: { backgroundColor: '#009688' },
+                }}
+            />
+        </Stack.Navigator>
+    );
+}
 
 {/*Main Function */}
 function App() {
@@ -182,7 +230,7 @@ function App() {
                 <Tab.Screen name = "Home" component = {HomeStack} />
                 <Tab.Screen name = "Basics" component = {BasicsStack} />
                 <Tab.Screen name = "Grammar" component = {GrammarStack} />
-                <Tab.Screen name = "Vocabulary" component = {HomeStack} />
+                <Tab.Screen name = "Vocabulary" component = {VocabularyStack} />
             
             </Tab.Navigator>
         </NavigationContainer>    
