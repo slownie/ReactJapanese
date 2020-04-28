@@ -13,6 +13,9 @@ import Radicals from './src/basics/Radicals';
 {/*Grammar Imports */}
 import SentenceStructure from './src/grammar/SentenceStructure'
 
+{/*Vocabulary Imports */}
+import GreetAndFare from './src/vocabulary/GreetAndFare';
+
 import styles from './src/Styles'
 
 const Stack = createStackNavigator();
@@ -84,6 +87,7 @@ function VocabularyScreen({navigation}) {
         <Button
             title = 'Greetings and Farewells'
             color = '#009688'
+            onPress = {() => navigation.navigate('Greetings and Farewells')}
         />
 
         <Button
@@ -207,6 +211,17 @@ function VocabularyStack() {
              <Stack.Screen
                 name = 'Vocabulary'
                 component = {VocabularyScreen}
+                options = {{
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: { fontWeight: 'bold' },
+                    headerStyle: { backgroundColor: '#009688' },
+                }}
+            />
+
+            <Stack.Screen
+                name = 'Greetings and Farewells'
+                component = {GreetAndFare}
                 options = {{
                     headerTitleAlign: 'center',
                     headerTintColor: '#fff',
