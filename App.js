@@ -16,6 +16,7 @@ import VerbConj from './src/grammar/VerbConj';
 
 {/*Vocabulary Imports */}
 import GreetAndFare from './src/vocabulary/GreetAndFare';
+import Family from './src/vocabulary/Family';
 
 import styles from './src/Styles'
 
@@ -98,8 +99,9 @@ function VocabularyScreen({navigation}) {
         />
 
         <Button
-            title = 'Food'
+            title = 'Family'
             color = '#009688'
+            onPress = {() => navigation.navigate('Family')}
         />        
     </SafeAreaView>
     );
@@ -240,6 +242,17 @@ function VocabularyStack() {
             <Stack.Screen
                 name = 'Greetings and Farewells'
                 component = {GreetAndFare}
+                options = {{
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: { fontWeight: 'bold' },
+                    headerStyle: { backgroundColor: '#009688' },
+                }}
+            />
+
+            <Stack.Screen
+                name = 'Family'
+                component = {Family}
                 options = {{
                     headerTitleAlign: 'center',
                     headerTintColor: '#fff',
