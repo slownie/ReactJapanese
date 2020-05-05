@@ -3,7 +3,7 @@ import { SafeAreaView, ScrollView, Text } from 'react-native';
 
 import styles from '../Styles';
 
-function BasicParticles() {
+function DirectionParticles() {
     return (
         <SafeAreaView style = {styles.page}>
             <ScrollView>
@@ -65,4 +65,4 @@ function BasicParticles() {
     );
 }
 
-export default BasicParticles;
+export default DirectionParticles;

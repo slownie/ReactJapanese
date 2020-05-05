@@ -14,6 +14,7 @@ import Radicals from './src/basics/Radicals';
 import SentenceStructure from './src/grammar/SentenceStructure'
 import VerbConj from './src/grammar/VerbConj';
 import BasicParticles from './src/grammar/BasicParticles';
+import DirectionParticles from './src/grammar/DirectionParticles';
 
 {/*Vocabulary Imports */}
 import GreetAndFare from './src/vocabulary/GreetAndFare';
@@ -76,10 +77,16 @@ function GrammarScreen({navigation}) {
             />
 
             <Button
-                title = 'Particles'
+                title = 'Basic Particles'
                 color = '#009688'
                 onPress = {() => navigation.navigate('Basic Particles')}
             />        
+
+            <Button
+                title = 'Direction Particles'
+                color = '#009688'
+                onPress = {() => navigation.navigate('Direction Particles')}
+            />
 
             <Button
                 title = 'Verb Conjugation'
@@ -214,8 +221,8 @@ function GrammarStack() {
             />
 
             <Stack.Screen
-                name = 'Verb Conjugation'
-                component = {VerbConj}
+                name = 'Basic Particles'
+                component = {BasicParticles}
                 options = {{
                     headerTitleAlign: 'center',
                     headerTintColor: '#fff',
@@ -225,8 +232,19 @@ function GrammarStack() {
             />
 
             <Stack.Screen
-                name = 'Basic Particles'
-                component = {BasicParticles}
+                name = 'Direction Particles'
+                component = {DirectionParticles}
+                options = {{
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: { fontWeight: 'bold' },
+                    headerStyle: { backgroundColor: '#009688' },
+                }}
+            />
+
+            <Stack.Screen
+                name = 'Verb Conjugation'
+                component = {VerbConj}
                 options = {{
                     headerTitleAlign: 'center',
                     headerTintColor: '#fff',
