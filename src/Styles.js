@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         lineHeight: 18,
         marginLeft: 5,
         marginRight: 5,
-        marginBottom: 10,
+        marginBottom: 5,
     },
 
     definition: {
@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: scale(12),
         lineHeight: 18,
+        marginTop: 5,
         marginLeft: 5,
         marginRight: 5,
         marginBottom: 10,
