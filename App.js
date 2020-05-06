@@ -19,6 +19,7 @@ import DirectionParticles from './src/grammar/DirectionParticles';
 {/*Vocabulary Imports */}
 import GreetAndFare from './src/vocabulary/GreetAndFare';
 import Family from './src/vocabulary/Family';
+import Time from './src/vocabulary/Time';
 
 import styles from './src/Styles'
 
@@ -112,6 +113,12 @@ function VocabularyScreen({navigation}) {
             color = '#009688'
             onPress = {() => navigation.navigate('Family')}
         />        
+
+        <Button
+            title = 'Time'
+            color = '#009688'
+            onPress = {() => navigation.navigate('Time')}
+        />
     </SafeAreaView>
     );
 }
@@ -284,6 +291,17 @@ function VocabularyStack() {
             <Stack.Screen
                 name = 'Family'
                 component = {Family}
+                options = {{
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: { fontWeight: 'bold' },
+                    headerStyle: { backgroundColor: '#009688' },
+                }}
+            />
+
+            <Stack.Screen
+                name = 'Time'
+                component = {Time}
                 options = {{
                     headerTitleAlign: 'center',
                     headerTintColor: '#fff',
