@@ -25,6 +25,11 @@ function BasicParticles() {
                     is understood by both parties, it is generally omitted.
                 </Text>
 
+                <Text style = {styles.text}><Text style = {{ fontWeight: 'bold'}}>Example{'\n'}</Text>
+                    わたしはトムです。{'\n'}
+                    "I am Tom."
+                </Text>
+
                 <Text style = {styles.header}>が - Subject Marker</Text>
                 <Text style = {styles.text}>
                     が is used in a similar way to は, except it is used to 
@@ -42,6 +47,13 @@ function BasicParticles() {
                     then become the topic.
                 </Text>
 
+                <Text style = {styles.text}><Text style = {{ fontWeight: 'bold'}}>Example{'\n'}</Text>
+                    だれがきましたか。{'\n'}
+                    "Who came?" {'\n'} {'\n'}
+                    さかもとさんがきました。{'\n'}
+                    "Mr. Sakamoto came."
+                </Text>
+
                 <Text style = {styles.header}>を - Object Marker</Text>
                 <Text style = {styles.text}>
                     を pronounced as 'o', is used to mark the object of the
@@ -49,7 +61,12 @@ function BasicParticles() {
                     sentence.
                 </Text>
 
-                <Text style = {styles.header}>も - Too / As well Marker</Text>
+                <Text style = {styles.text}><Text style = {{ fontWeight: 'bold'}}>Example{'\n'}</Text>
+                    りんごをたべます。{'\n'}
+                    "I eat apples."
+                </Text>
+
+                <Text style = {styles.header}>も - Inclusive Marker</Text>
                 <Text style = {styles.text}>
                     も has two usages depending on where it is placed in the
                     sentence. If it is placed after a noun, it means "also".
@@ -58,6 +75,11 @@ function BasicParticles() {
                     {'\n'}
                     {'\n'}
                     When used, も replaces は, が, or を in a sentence.
+                </Text>
+
+                <Text style = {styles.text}><Text style = {{ fontWeight: 'bold'}}>Example{'\n'}</Text>
+                    にほんごもべんきょうします。{'\n'}
+                    "I am also studying Japanese."
                 </Text>
                 
             </ScrollView>
