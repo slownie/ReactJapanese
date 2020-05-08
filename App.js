@@ -12,9 +12,9 @@ import Radicals from './src/basics/Radicals';
 
 {/*Grammar Imports */}
 import SentenceStructure from './src/grammar/SentenceStructure'
-import VerbConj from './src/grammar/VerbConj';
 import BasicParticles from './src/grammar/BasicParticles';
 import DirectionParticles from './src/grammar/DirectionParticles';
+import Verbs from './src/grammar/Verbs';
 
 {/*Vocabulary Imports */}
 import GreetAndFare from './src/vocabulary/GreetAndFare';
@@ -90,9 +90,9 @@ function GrammarScreen({navigation}) {
             />
 
             <Button
-                title = 'Verb Conjugation'
+                title = 'Verbs'
                 color = '#009688'
-                onPress = {() => navigation.navigate('Verb Conjugation')}
+                onPress = {() => navigation.navigate('Verbs')}
             />
         </SafeAreaView>
     );
@@ -250,8 +250,8 @@ function GrammarStack() {
             />
 
             <Stack.Screen
-                name = 'Verb Conjugation'
-                component = {VerbConj}
+                name = 'Verbs'
+                component = {Verbs}
                 options = {{
                     headerTitleAlign: 'center',
                     headerTintColor: '#fff',
